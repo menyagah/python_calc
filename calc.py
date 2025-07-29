@@ -18,23 +18,25 @@ def calc():
         try:
             user_input = [int(i) for i in user_input]
         except ValueError as e:
-            print(f"Invalid input: all operands must be numbers! Details: {e}")
-        a, b = user_input
+            print(f"Invalid input: all operands must be numbers and a python arithmetic operator! Details: {e}")
+        
         if len(user_input) != 2:
             print('Please provide exactly two numbers')
-        match removed_item:
-            case '+':
-                print(a + b)
-            case '*':
-                print(a * b)
-            case '-':
-                print(a - b)
-            case '/':
-                if b == 0:
-                    print("cannot divide by zero")
-                print(a / b)
+        else:
+            a, b = user_input
+            match removed_item:
+                case '+':
+                    print(a + b)
+                case '*':
+                    print(a * b)
+                case '-':
+                    print(a - b)
+                case '/':
+                    if b == 0:
+                        print("cannot divide by zero")
+                    print(a / b)
         
 
-  
+calc()  
               
    
